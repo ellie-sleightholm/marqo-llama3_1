@@ -5,7 +5,7 @@ from knowledge_store import MarqoKnowledgeStore
 
 # Initialize LLM model with updated configuration
 LLM = Llama(
-    model_path="models/8B/Meta-Llama-3.1-8B-Instruct.Q2_K.gguf",
+    model_path="models/8B/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf",
     n_ctx=4096,  # Increased context size
     n_gpu_layers=1  # Enable GPU acceleration if available
 )
