@@ -57,10 +57,14 @@ class MarqoKnowledgeStore:
         Returns:
             List[str]: A list of content strings that match the query.
         """
+        relevance_score = 0.6
+        
         resp = self._client.index(self._index_name).search(q=query, limit=limit)
         for res in resp["hits"]:
-            print(res["_score"])
-        knowledge = [res[content_var] for res in resp["hits"] if res["_score"] > 0.8]
+            if res["_score"] > relevance_score:
+                print("Marqo Knowledge Store:", res['text'])
+                print("Score:", res['_score'])
+        knowledge = [res[content_var] for res in resp["hits"] if res["_score"] > relevance_score]
         return knowledge
 
     def add_document(self, document: str) -> None:
@@ -86,7 +90,7 @@ class MarqoKnowledgeStore:
         """
         try:
             self._client.index(self._index_name).delete()
-        except marqo.errors.IndexNotFoundError:
+        except marqo.errors.MarqoWebError:
             print(f"Index '{self._index_name}' not found. Creating a new one.")
         except Exception as e:
             print(f"Error deleting index '{self._index_name}': {e}")
