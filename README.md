@@ -11,7 +11,7 @@ Article to accompany project:
 ## Setup and Installation
 I have also written an article that walks through this project that I encourage you to read when getting started.
 
-#### Clone This Repository
+### Clone This Repository
 First clone this repository:
 ```
 git clone https://github.com/ellie-sleightholm/marqo-llama3_1.git
