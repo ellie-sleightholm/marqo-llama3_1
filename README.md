@@ -30,7 +30,7 @@ The frontend will look the same as in the video at the top of this README.
 ### Backend
 
 #### 1. Obtaining Llama 3.1 Models
-To run this project locally, you will need to obtain the appropriate models. If you have 16GB of RAM, I would recommend starting with 8B parameter LlaMa 3.1 GGML models. For this demo I used `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF`. 
+To run this project locally, you will need to obtain the appropriate models. If you have 16GB of RAM, I would recommend starting with 8B parameter LlaMa 3.1 GGUF models. For this demo I used `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF`. 
 
 There are several models you can download from the `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF` [Hugging Face hub](https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/tree/main). I recommend starting with `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`. The demo video above uses `Q2_K`.
 
