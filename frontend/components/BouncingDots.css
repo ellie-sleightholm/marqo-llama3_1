@@ -1,0 +1,33 @@
+.bouncing-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bouncing-dots > div {
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: bouncing-dots 1.4s infinite ease-in-out both;
+}
+
+.bouncing-dots > div:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.bouncing-dots > div:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bouncing-dots {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
