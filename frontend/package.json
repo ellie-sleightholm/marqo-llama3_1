@@ -1,0 +1,33 @@
+{
+  "name": "marqo-knowledge-manager",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "npx prettier --write . "
+  },
+  "dependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "prettier": "^2.8.7",
+    "prism-react-renderer": "^2.0.5",
+    "prismjs": "^1.29.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-promise-tracker": "^2.1.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0",
+    "@types/react-syntax-highlighter": "^15.5.7"
+  }
+}

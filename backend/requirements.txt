@@ -1,0 +1,9 @@
+beautifulsoup4
+Flask
+Flask_Cors
+marqo
+python-dotenv
+Requests
+llama-cpp-python
+black
+nltk
