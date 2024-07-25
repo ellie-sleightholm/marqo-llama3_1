@@ -98,7 +98,7 @@ You can also change the score in the function `query_for_content` in [`backend/k
 ```python
 relevance_score = 0.6
 ```
-This queries the Marqo knowledge store and retrieves content based on the provided query. It filters the results to include only those with a relevance score above *0.8* and returns the specified content from these results, limited to a maximum number of results as specified by the limit parameter. Feel free to change this score depending on your relevance needs. 
+This queries the Marqo knowledge store and retrieves content based on the provided query. It filters the results to include only those with a relevance score above *0.6* and returns the specified content from these results, limited to a maximum number of results as specified by the limit parameter. Feel free to change this score depending on your relevance needs. 
 
 ## Specifications
 This can run locally on an M1 or M2 Mac or with a CUDA capable GPU on Linux or Windows. If you want to run this on an M1 or M2 Mac please be sure to have the ARM64 version of Python installed, this will make `llama.cpp` builds for ARM64 and utilises Metal for inference rather than building for an x86 CPU and being emulated with Rosetta.
