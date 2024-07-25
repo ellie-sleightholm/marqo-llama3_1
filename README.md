@@ -2,7 +2,7 @@
 
 This is a small demo of a RAG Question and Answering System with [LlaMa 3.1](https://llama.meta.com/) and [Marqo](https://marqo.ai/).
 
-Article to accompany project: 
+Article to accompany project: [Marqo Article](https://marqo.ai/blog)
 
 <p align="center">
     <a><img src="https://github.com/ellie-sleightholm/marqo-llama3_1/blob/main/assets/marqo_llama3_1_demo.gif"></a>
