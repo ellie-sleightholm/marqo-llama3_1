@@ -11,6 +11,12 @@ Article to accompany project:
 ## Setup and Installation
 I have also written an article that walks through this project that I encourage you to read when getting started.
 
+#### Clone This Repository
+First clone this repository:
+```
+git clone https://github.com/ellie-sleightholm/marqo-llama3_1.git
+```
+
 ### Frontend
 
 Installs the necessary Node.js packages for the frontend project and then start the development server. This will be at http://localhost:3000.
@@ -22,13 +28,8 @@ npm run dev
 The frontend will look the same as in the video at the top of this README. 
 
 ### Backend
-#### 1. Clone This Repository
-First clone this repository:
-```
-git clone https://github.com/ellie-sleightholm/marqo-llama3_1.git
-```
 
-#### 2. Obtaining Llama 3.1 Models
+#### 1. Obtaining Llama 3.1 Models
 To run this project locally, you will need to obtain the appropriate models. If you have 16GB of RAM, I would recommend starting with 8B parameter LlaMa 3.1 GGML models. For this demo I used `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF`. 
 
 There are several models you can download from the `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF` [Hugging Face hub](https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/tree/main). I recommend starting with `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`. The demo video above uses `Q2_K`.
@@ -37,7 +38,7 @@ Download this model and place it into a new directory `backend/models/8B/`.
 
 _**Important note**_: there is some adjustment needed for llama cpp (see this [issue](https://github.com/ggerganov/llama.cpp/issues/8650)). Please be aware of this when working with this project.
 
-#### 3. Install Dependencies
+#### 2. Install Dependencies
 Next, navigate to the backend directory, create a virtual environment, activate it, and install the required Python packages listed in the [requirements.txt](/backend/requirements.txt) file.
 
 ```
@@ -59,7 +60,7 @@ import nltk
 nltk.download("all")
 ```
 
-#### 4. Run Marqo
+#### 3. Run Marqo
 For the RAG aspect of this project, I will be using [Marqo](https://marqo.ai/), the end-to-end vector search engine.
 
 Marqo requires Docker. To install Docker go to the [Docker Official website](https://docs.docker.com/get-docker/). Ensure that docker has at least 8GB memory and 50GB storage. In Docker desktop, you can do this by clicking the settings icon, then resources, and selecting 8GB memory.
@@ -75,7 +76,7 @@ When the project starts, the Marqo index will be empty until you add information
 
 Great, now all that's left to do is run the webserver!
 
-#### 5. Run the Web Server
+#### 4. Run the Web Server
 Starts a Flask development server in debug mode on port 5001 using Python 3:
 ```
 python3 -m flask run --debug -p 5001
