@@ -97,7 +97,7 @@ This can run locally on an M1 or M2 Mac or with a CUDA capable GPU on Linux or W
 
 ## Further Work
 This is a very simple demo. Future work on this project will include several enhancements:
-* Enable Chatbot Memory: Store conversatiion history to make conversing with the chatbot more like a real-life experience
+* Enable Chatbot Memory: Store conversation history to make conversing with the chatbot more like a real-life experience
 * Provide an Initial Set of Documents: at the moment, when the project starts, the Marqo index is empty. Results will be better if we preload the Marqo knowledge store with a set of initial documents relevant to the domain of interest.
 * Improve User Interface
 * Optimize Backend Performance
