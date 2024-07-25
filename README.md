@@ -96,7 +96,7 @@ LLM = Llama(
 
 You can also change the score in the function `query_for_content` in [`backend/knowledge_store.py`](/backend/knowledge_store.py):
 ```python
-knowledge = [res[content_var] for res in resp["hits"] if res["_score"] > 0.8]
+relevance_score = 0.6
 ```
 This queries the Marqo knowledge store and retrieves content based on the provided query. It filters the results to include only those with a relevance score above *0.8* and returns the specified content from these results, limited to a maximum number of results as specified by the limit parameter. Feel free to change this score depending on your relevance needs. 
 
