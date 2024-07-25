@@ -21,13 +21,12 @@ def answer(user_input: str, mks: MarqoKnowledgeStore, limit: int = 5) -> Generat
     Yields:
         Generator[str, None, None]: The LLM's response in chunks.
     """
-    print(f"QUERY: {user_input}")
 
     context = mks.query_for_content(user_input, "text", limit)
-    print(json.dumps(context, indent=4))
-    print(f"Context length: {len(context)}")
+    # print(json.dumps(context, indent=4))
 
     sources = "\n".join(f"[{i+1}] {source}" for i, source in enumerate(context))
+    print(f"QUERY: {user_input}")
     print("Context from Marqo:", json.dumps(context, indent=4))
     
     prompt = f"""
