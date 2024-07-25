@@ -6,17 +6,8 @@ This is a small demo of a RAG Question and Answering System with [LlaMa 3.1](htt
     <a><img src="https://github.com/ellie-sleightholm/marqo-llama3_1/blob/main/assets/marqo_llama3_1_demo.gif"></a>
 </p>
 
-## Project Structure
-
-### `frontend/`
-
-This folder contains the code for the frontend of the application, as seen in the video above. This is written with NextJS and TypeScript.
-
-### `backend/`
-
-This folder contains the backend code, the backend is written as a webserver using flask.
-
 ## Setup and Installation
+I have also written an article that walks through this project that I encourage you to read when getting started.
 
 ### Frontend
 
@@ -73,6 +64,7 @@ docker rm -f marqo
 docker pull marqoai/marqo:latest
 docker run --name marqo -it -p 8882:8882 marqoai/marqo:latest
 ```
+When the project starts, the Marqo index will be empty until you add information in the 'Add Knowledge' section of the frontend. 
 
 Great, now all that's left to do is run the webserver!
 
@@ -84,8 +76,32 @@ python3 -m flask run --debug -p 5001
 
 Navigate to http://localhost:3000 and begin inputting your questions to Llama 3.1!
 
-## Further Guidance
-To accompany this project, I wrote an article covering how you can run this repository and what you can expect to see when doing so. Visit this article for further guidance and information.
+## Experimenting
+When running this project, feel free to experiment with different settings. 
+
+You can change the model in [`backend/ai_chat.py`](/backend/ai_chat.py):
+```python
+LLM = Llama(
+    model_path="models/8B/your_model",
+)
+```
+
+You can also change the score in the function `query_for_content` in [`backend/knowledge_store.py`](/backend/knowledge_store.py):
+```python
+knowledge = [res[content_var] for res in resp["hits"] if res["_score"] > 0.8]
+```
+This queries the Marqo knowledge store and retrieves content based on the provided query. It filters the results to include only those with a relevance score above *0.8* and returns the specified content from these results, limited to a maximum number of results as specified by the limit parameter. Feel free to change this score depending on your relevance needs. 
 
 ## Specifications
 This can run locally on an M1 or M2 Mac or with a CUDA capable GPU on Linux or Windows. If you want to run this on an M1 or M2 Mac please be sure to have the ARM64 version of Python installed, this will make `llama.cpp` builds for ARM64 and utilises Metal for inference rather than building for an x86 CPU and being emulated with Rosetta.
+
+## Further Work
+This is a very simple demo. Future work on this project will include several enhancements:
+* Enable Chatbot Memory: Store conversatiion history to make conversing with the chatbot more like a real-life experience
+* Provide an Initial Set of Documents: at the moment, when the project starts, the Marqo index is empty. Results will be better if we preload the Marqo knowledge store with a set of initial documents relevant to the domain of interest.
+* Improve User Interface
+* Optimize Backend Performance
+* Extend Support for Different Document Types
+
+## Further Guidance
+To accompany this project, I wrote an article covering how you can run this repository and what you can expect to see when doing so. Visit this article for further guidance and information.
