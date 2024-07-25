@@ -26,11 +26,9 @@ To run this project locally, you will need to obtain the appropriate models. If 
 
 There are several models you can download from the `lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF` [Hugging Face hub](https://huggingface.co/lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF/tree/main). I recommend starting with `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf`. The demo video above uses `Q2_K`.
 
-Important note: there is some adjustment needed for llama cpp (see this [issue](https://github.com/ggerganov/llama.cpp/issues/8650)). Please be aware of this when working with this project.
-
 Download this model and place it into a new directory `backend/models/8B/`.
 
-Feel free to experiment with different 8B models!
+_**Important note**_: there is some adjustment needed for llama cpp (see this [issue](https://github.com/ggerganov/llama.cpp/issues/8650)). Please be aware of this when working with this project.
 
 #### 2. Install Dependencies
 Next, navigate to the backend directory, create a virtual environment, activate it, and install the required Python packages listed in the [requirements.txt](/backend/requirements.txt) file.
