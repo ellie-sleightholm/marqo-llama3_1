@@ -2,7 +2,7 @@
 
 This is a small demo of a RAG Question and Answering System with [LlaMa 3.1](https://llama.meta.com/) and [Marqo](https://github.com/marqo-ai/marqo). This project has been built based off the original Marqo & Llama repo by [Owen Elliot](https://github.com/OwenPendrighElliott/LocalMarqoQA).
 
-Article to accompany project: [Marqo Article](https://marqo.ai/blog/marqo-llama-rag)
+Article to accompany project: [Fully Local RAG with Llama 3.1 & Marqo](https://marqo.ai/blog/marqo-llama-rag)
 
 <p align="center">
     <a><img src="https://github.com/ellie-sleightholm/marqo-llama3_1/blob/main/assets/marqo_llama3_1_demo.gif"></a>
