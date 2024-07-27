@@ -112,4 +112,4 @@ This is a very simple demo. Future work on this project will include several enh
 * Extend Support for Different Document Types
 
 ## Further Guidance
-To accompany this project, I wrote an article covering how you can run this repository and what you can expect to see when doing so. Visit this article for further guidance and information.
+To accompany this project, I wrote an article covering how you can run this repository and what you can expect to see when doing so. Visit this [article](https://www.marqo.ai/blog/marqo-llama-rag) for further guidance and information.
