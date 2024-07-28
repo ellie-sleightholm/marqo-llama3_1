@@ -9,7 +9,7 @@ Article to accompany project: [Fully Local RAG with Llama 3.1 & Marqo](https://m
 </p>
 
 ## Setup and Installation
-I have also written an article that walks through this project that I encourage you to read when getting started.
+I have also written an [article](https://marqo.ai/blog/marqo-llama-rag) that walks through this project that I encourage you to read when getting started.
 
 ### Clone This Repository
 First clone this repository:
